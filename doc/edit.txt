@@ -1,0 +1,6 @@
+assert_select 的作用是检查有没有指定的HTML标签，这种方法叫做“选择符”
+
+assert_select "title", "Home | Ruby on Rails Tutorial Sample App"
+
+这行代码的作用是检查有没有<title> 标签，以及里面的内容是不是字符串Home | Ruby on Rails Tutorial Sample App
+
