@@ -1,10 +1,16 @@
+  <div class="center jumbotron">
   <h1>Blog</h1>
-  <p>
+
+  <h2>
     This the home page the 
     <a href="http://www.railstutorial.org" title="">Ruby on rails tutorial</a>
     blog.
-  </p>
-
+  </h2>
+  <%= link_to "Sign up now",'#',class: "btn btn-lg btn-primary" %>
+  <!-- <a href="#" class="btn btn-lg btn-primary">Sign up now</a> -->
+</div>
+<%= link_to image_tag("rails.png", alt: "Rails logo"),
+'http://rubyonrails.org/' %>
 <!-- <h1>Welcome To My Blog</h1>
 <p>
   This is the home page for the 
