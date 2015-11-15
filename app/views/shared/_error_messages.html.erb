@@ -1,0 +1,15 @@
+<% if @user.errors.any? %>
+<!-- any? and empty? 相反 any? 是有 返回 true 没有返回 false -->
+<div id="error_explanation">
+  <div class="alert alert-danger">
+    The form contains<%= pluralize(@user.errors.count,"error")%>
+<!-- 新的方法 是 pluralize  
+第一个参数 是整数  返回值是这个数字 和第二个参数 组合在一起后  正确的单复数形式 pluralize(1, "error") -->
+  </div>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end -%>

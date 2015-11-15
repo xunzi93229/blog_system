@@ -1,0 +1,15 @@
+新的方法 是 pluralize  
+第一个参数 是整数  返回值是这个数字 和第二个参数 组合在一起后  正确的单复数形式 pluralize(1, "error")
+
+首先 我们 使用get 方法  访问注册页面
+get signup_path
+为了测试提交表单后的状态  ，我们要 想users_path 发起
+POST请求 ，这个操作 可以使用post 方法完成
+这里要使用到 create 动作中传给 User.new 的params[:user] 哈希 我们把 post方法放在
+assert_no_different 方法的代码块中，并且把assert_no_different 方法的参数设为字符串
+'User.count' ，执行这段代码快时 ，会比较块中的代码执行前后的User.count 
+
+注册成功的测试
+
+
+post_via_redirect 方法，是请求用户的资料页面
