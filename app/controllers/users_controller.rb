@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     #@user = User.new(params[:user])
     # = @user = User.new(name: ...,email .....)
     if @user.save
+      log_in @user
       flash[:success] = "Congratulations on the success of the registration"
       redirect_to @user
       #Deal with the registered success!
